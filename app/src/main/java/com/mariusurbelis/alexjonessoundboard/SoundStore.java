@@ -45,10 +45,17 @@ public abstract class SoundStore {
         return sounds;
     }
 
-    // Configure the text you want replaced in the titles
     public static Map<String, String> replacementMap = new HashMap<String, String>() {{
         put("im", "i'm");
-        // etc
+        put("didnt", "didn't");
+        put("dont", "don't");
+        put("theyre", "they're");
+        put("whos", "who's");
+        put("weeds", "weed's");
+        put("isnt", "isn't");
+        put("youve", "you've");
+        put("stinkin", "stinkin'");
+        put("lovin", "lovin'");
     }};
 
     public static String processedTitle(String title) {
