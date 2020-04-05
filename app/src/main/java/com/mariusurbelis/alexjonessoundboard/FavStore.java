@@ -1,4 +1,4 @@
-package com.example.soundboardtemplate;
+package com.mariusurbelis.alexjonessoundboard;
 
 import android.content.SharedPreferences;
 

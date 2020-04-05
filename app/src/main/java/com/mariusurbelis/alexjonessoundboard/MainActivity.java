@@ -13,11 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.soundboardtemplate;
+package com.mariusurbelis.alexjonessoundboard;
 
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.widget.CompoundButton;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;

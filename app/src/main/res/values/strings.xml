@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Soundboard Template</string>
+    <string name="app_name">Alex Jones</string>
     <string name="fav_desc">Icon with full heart</string>
     <string name="not_fav_desc">Icon with empty heart</string>
 </resources>

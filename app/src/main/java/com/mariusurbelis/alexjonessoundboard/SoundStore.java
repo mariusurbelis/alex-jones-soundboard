@@ -13,10 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.soundboardtemplate;
+package com.mariusurbelis.alexjonessoundboard;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.os.Debug;
+import android.util.Log;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -25,18 +27,12 @@ import java.util.Map;
 
 public abstract class SoundStore {
 
-    // Configure the text you want replaced in the titles
-    public static Map<String, String> replacementMap = new HashMap<String, String>() {{
-        put("im", "i'm");
-        // etc
-    }};
-
     public static ArrayList<Sound> getAllSounds(Context context) {
         Resources res = context.getApplicationContext().getResources();
         ArrayList<String> ids = new ArrayList<>();
 
-        for (Field field :
-                R.raw.class.getFields()) {
+        for (Field field:
+             R.raw.class.getFields()) {
             ids.add(field.getName());
         }
 
@@ -49,11 +45,17 @@ public abstract class SoundStore {
         return sounds;
     }
 
+    // Configure the text you want replaced in the titles
+    public static Map<String, String> replacementMap = new HashMap<String, String>() {{
+        put("im", "i'm");
+        // etc
+    }};
+
     public static String processedTitle(String title) {
         title = title.replace('_', ' ');
 
-        for (Map.Entry<String, String> entry :
-                replacementMap.entrySet()) {
+        for (Map.Entry<String, String> entry:
+        replacementMap.entrySet()) {
             title = title.replaceAll(entry.getKey(), entry.getValue());
         }
 
